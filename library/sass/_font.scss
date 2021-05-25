@@ -1,17 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
 
-$link-font: 'New Tegomin', serif;
-$main-font: 'Quattrocento Sans', sans-serif;
-$header-font: 'Fira Sans Condensed', sans-serif;
+$main-font: 'Crimson Text', serif;
+$sub-font:'Montserrat', sans-serif;
+$header-font: 'Crimson Text', serif;
 
-$catch-copy-font-size: 6vw;
-$l-font-spacing: 7px;
+//-----------------------------------
+// index.html
+//-----------------------------------
+// Used on the index page only
+// On the text right below the main logo
+$catch-copy-font-size-xs: 6vw;
+$catch-copy-font-size-sm: 30px;
+$catch-copy-font-letter-spacing: 6px;
 
-$header-font-size-sm: 26px;
+//-----------------------------------
+// All pages
+//-----------------------------------
+// Used on each page exept the index page
+// the title of the page
 $header-font-size-xl: 5vw;
+$header-font-size-sm: 48px;
 
-$s-font-size: 18px;
-$s-font-line-height: 25px;
-$s-font-letter-spacing: 2px;
+//-----------------------------------
+// All pages
+//-----------------------------------
+// Used for the general text on the screen
+// Larger than smartphone size
+$s-font-size-xs: 5.6vw;
+$s-font-line-height-xs: calc(5.6vw * 1.4);
+$s-font-letter-spacing-xs: calc(5.6vw * 0.03);
+
+//-----------------------------------
+// All pages
+//-----------------------------------
+// Used for the same text above but
+// for the screens larger than smartphone size
+$s-font-size-sm: 25px;
+$s-font-line-height-sm: 2;
+$s-font-letter-spacing-sm: 2px;
+
+//-----------------------------------
+// blog.html
+//-----------------------------------
+$blog-nav-header-font-size-xs: 6.5vw;
+$blog-nav-header-font-size-sm: 26px;
+
+$blog-nav-link-font-size-xs: 4.5vw;
+$blog-nav-link-font-size-sm: 16px;
+$blog-nav-link-font-letter-spacing-xs: calc(4.5vw * 0.2);
+
+$unit-meta-font-size-xs: 4vw;
+$unit-meta-font-size-sm: 16px;
+$unit-meta-font-letter-spacing-sm: 0.5px;
+
+$unit-headline-font-size-xs: 7.5vw;
+$unit-headline-font-size-sm: 40px;
+
+$unit-categories-font-size-xs: 3.5vw;
+$unit-categories-font-size-sm: 12px;
+
+//-----------------------------------
+// single-article-page.html
+//-----------------------------------
+$article-header-font-size-xs: 10vw;
+$article-header-font-size-sm: 58px;
+$article-header-font-letter-spacing-xs: calc(10vw * 0.05);

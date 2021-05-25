@@ -1,0 +1,81 @@
+@import "screen-size-mixins";
+@import "loading-animation-general";
+@import "main-area";
+@import "font";
+
+.blog-post-header {
+    @import "asset-urls";
+    background:         
+    linear-gradient(
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.5)), $blog-sample-2;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+
+    @include sm {
+        margin-bottom: 90px;
+        padding-top: 170px;
+        padding-bottom: 120px;
+    }
+
+    .meta-tertiary {
+        font-size: $unit-meta-font-size-xs;
+        color:rgba(white, 0.6);
+        margin-bottom: 10px;
+
+        @include sm {
+            font-size: $unit-meta-font-size-sm;
+            letter-spacing: $unit-meta-font-letter-spacing-sm;
+            margin-bottom: 20px;
+        }
+
+        .date-updated {
+            font-style: italic;
+            &:before {
+                content: " * Updated on ";
+            }
+        }
+    }
+    .headline {
+        text-align: center;
+        font-size: $article-header-font-size-xs;
+        letter-spacing: $article-header-font-letter-spacing-xs;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        max-width: 1000px;
+
+        @include sm {
+            font-size: $article-header-font-size-sm;
+            margin-bottom: 30px;
+        }
+    }
+    .categories {
+        font-family: $sub-font;
+        font-size: $unit-categories-font-size-xs;
+
+        @include sm {
+            font-size: $unit-categories-font-size-sm;
+        }
+        a {
+            color:rgba(white, 0.7);
+            text-transform: uppercase;
+            &:after {
+                content: ", ";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+
+    }
+}

@@ -1,9 +1,11 @@
+@import "colours";
+
 /*========= ローディング画面のためのCSS ===============*/
 #splash {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: #DAD4D2;
+	background: $main-gray-colour;
     backdrop-filter: blur(5px);
 	z-index: 9999999;
 	text-align:center;
@@ -24,11 +26,11 @@
 
 @import "colours";
 body{
-    background:$main-gray-colour;/*遷移アニメーションと同じ色を指定*/
+    background:whitesmoke;/*遷移アニメーションと同じ色を指定*/
 }
 
 body.appear{
-    background:$main-gray-colour;/*画面を開いた後の背景色を指定*/
+    background: whitesmoke;/*画面を開いた後の背景色を指定*/
 }
 
 /*画面遷移の後現れるコンテンツ設定*/

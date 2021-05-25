@@ -6,16 +6,17 @@
 
 body {
     @import "colours";
-    background-color: $main-gray-colour;
     overflow: hidden;
     cursor: none;
     position: relative;
+    @import "font";
+    font-family: $main-font;
 
     .cursor {
-        width: 2rem;
-        height: 2rem;
-        background-color: #856a5d;
-        opacity: 0.7;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $brown-colour;
+        opacity: 0.8;
         border-radius: 50%;
         position: absolute;
         z-index: 100;
@@ -26,7 +27,7 @@ body {
         transform-origin: 100% 100%;
     }
     .link-grow {
-        transform: scale(2.5);
+        transform: scale(3);
         opacity: 0.4;
     }
     .whiten {

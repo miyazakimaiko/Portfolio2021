@@ -1,9 +1,11 @@
+@import "colours";
+
 /*========= loading screen CSS ===============*/
 #splash {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: #B7B6C0;
+	background: rgba($main-font-colour, 0.5);
 	z-index: 9999999;
 	text-align:center;
 	color:#fff;
@@ -39,7 +41,7 @@ body.appear .splashbg{
 	left: 0;
     transform: scaleY(0);
 	@import "colours";
-    background-color: rgba(255, 255, 255, 0.575);/*伸びる背景色の設定*/
+    background-color: rgba($main-font-colour, 0.7);/*伸びる背景色の設定*/
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;

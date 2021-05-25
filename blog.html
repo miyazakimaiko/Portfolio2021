@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Irish Travel Product Company</title>
+    <link rel="stylesheet" href="./library/css/common.css">
+    <link rel="stylesheet" href="./library/css/blog-page.css">
+</head>
+
+
+<body>
+    <div class="cursor"></div>
+
+    <div id="splash">
+        <div id="splash-logo">Loading...</div>
+    </div>
+
+    <div id="container" class="about-page foreground-container">
+        <header class="main">
+            <a href="/index.html">
+                <h1><div class="logo logo-white"></div></h1>        
+            </a>
+            <div class="menu-wrapper">
+                <div class="menu-icon" onclick="this.classList.toggle('hover');OpenNavigation(0)">
+                    <div class="menu-bar menu-bar-white menu-bar1"></div>
+                    <div class="menu-bar menu-bar-white menu-bar2"></div>
+                    <div class="menu-bar menu-bar-white menu-bar3"></div>
+                </div>
+            </div>
+        </header>
+        <nav id="nav-screen">
+            <ul>
+                <li class="menu-link"></li>
+                <li class="menu-link"><a href="/index.html"><p class="menu-link-text">HOME</p></a></li>
+                <li class="menu-link"><a href="/about.html"><p class="menu-link-text">ABOUT</p></a></li>
+                <li class="menu-link"><a href="/works.html"><p class="menu-link-text">WORKS</p></a></li>
+                <li class="menu-link"><a href="/blog.html"><p class="menu-link-text">BLOG</p></a></li>
+                <li class="menu-link"><a href="/contact.html"><p class="menu-link-text">CONTACT</p></a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="inner-screen-container">
+                <section class="article-header">
+                    <h1 class="page-title">BLOG</h1>
+                    <h2 class="page-description">Writes what I learned from apprenticeship program, personal projects and books 📚</h2>
+                </section>
+
+                <aside id="sidebar">
+                    <div class="blog-nav">
+                        <div class="header" onclick="this.classList.toggle('hover');OpenBlogNav(0)">TOPICS<span class="down-arrow"></span></div>
+                        <ul class="blog-nav-list">
+                            <li><a href="">All Posts</a></li>
+                            <li><a href="">Python</a></li>
+                            <li><a href="">C#</a></li>
+                            <li><a href="">JavaScript</a></li>
+                            <li><a href="">Software Development</a></li>
+                            <li><a href="">Python</a></li>
+                            <li><a href="">C#</a></li>
+                            <li><a href="">JavaScript</a></li>
+                            <li><a href="">Software Development</a></li>
+                            <li><a href="">All Posts</a></li>
+                            <li><a href="">Python</a></li>
+                            <li><a href="">C#</a></li>
+                            <li><a href="">JavaScript</a></li>
+                        </ul>
+                    </div>
+                </aside>  
+
+                <article>
+                    <div>
+                        <div class="single-unit-post">
+                            <p class="meta-tertiary">
+                                <time class="date-published">10 Apr '20</time>
+                                <time class="date-updated">10 May '20</time>
+                            </p>
+                            <h2 class="headline">
+                                <a href="/single-article.html">20 things I learned about Scrum from Learning Agile</a>
+                            </h2>
+                            <p class="categories">
+                                <a class="category" href="">Books</a>
+                                <a class="category" href="">Software Engineering</a>
+                                <a class="category" href="">Agile</a>
+                            </p>
+                            <div class="thumbnail">
+                                <a href="/single-article.html" class="thumbnail-image" style="background-image: url(./assets/images/mountains-with-a-girl.JPG)" classhref=""></a>
+                            </div>
+                        </div>
+                        <div class="single-unit-post">
+                            <p class="meta-tertiary">
+                                <time class="date-published">10 Apr '20</time>
+                                <time class="date-updated">10 May '20</time>
+                            </p>
+                            <h2 class="headline">
+                                <a href="/single-article.html">20 things I learned about Scrum from Learning Agile</a>
+                            </h2>
+                            <p class="categories">
+                                <a class="category" href="">Books</a>
+                                <a class="category" href="">Software Engineering</a>
+                                <a class="category" href="">Agile</a>
+                            </p>
+                            <div class="thumbnail">
+                                <a href="/single-article.html" class="thumbnail-image" style="background-image: url(./assets/images/mountains-with-a-girl.JPG)" classhref=""></a>
+                            </div>
+                        </div>
+                        <div class="single-unit-post">
+                            <p class="meta-tertiary">
+                                <time class="date-published">10 Apr '20</time>
+                                <time class="date-updated">10 May '20</time>
+                            </p>
+                            <h2 class="headline">
+                                <a href="">20 things I learned about Scrum from Learning Agile</a>
+                            </h2>
+                            <p class="categories">
+                                <a class="category" href="">Books</a>
+                                <a class="category" href="">Software Engineering</a>
+                                <a class="category" href="">Agile</a>
+                            </p>
+                            <div class="thumbnail">
+                                <a class="thumbnail-image" style="background-image: url(./assets/images/mountains-with-a-girl.JPG)" classhref=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>  
+    </div>
+    <script src="./library/js/jquery-3.6.0.min.js"></script>
+    <script src="./library/js/loading-animation.js"></script>
+    <script src="./library/js/nav-animation.js"></script>
+    <script src="./library/js/blog-nav-animation.js"></script>
+    <script src="./library/js/cursor.js"></script>
+</body>
+
