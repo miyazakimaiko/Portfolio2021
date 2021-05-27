@@ -9,6 +9,10 @@ function OpenNavigation(n) {
     let navScreen = document.getElementById("nav-screen");
     navScreen.style.display = "block";
 
+    // fix the header
+    let header = document.querySelector("header");
+    header.style.position = "fixed";
+
     // Change custom cursor's colour
     cursor.classList.add("whiten");
 
@@ -23,6 +27,10 @@ function OpenNavigation(n) {
 
     // Then hide background
     setTimeout(hideBackground, 800)
+
+    // unfix the header
+    let header = document.querySelector("header");
+    header.style.position = "absolute";
 
     // Change the colour of custom cursor
     cursor.classList.remove("whiten");
