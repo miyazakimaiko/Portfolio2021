@@ -28,9 +28,8 @@ $header-font-size-sm: 48px;
 //-----------------------------------
 // Used for the general text on the screen
 // Larger than smartphone size
-$s-font-size-xs: 5.6vw;
-$s-font-line-height-xs: calc(5.6vw * 1.4);
-$s-font-letter-spacing-xs: calc(5.6vw * 0.03);
+$s-font-size-xs: 5.2vw;
+$s-font-line-height-xs: 1.8;
 
 //-----------------------------------
 // All pages
@@ -39,15 +38,14 @@ $s-font-letter-spacing-xs: calc(5.6vw * 0.03);
 // for the screens larger than smartphone size
 $s-font-size-sm: 25px;
 $s-font-line-height-sm: 2;
-$s-font-letter-spacing-sm: 2px;
 
 //-----------------------------------
 // blog.html
 //-----------------------------------
-$blog-nav-header-font-size-xs: 6.5vw;
-$blog-nav-header-font-size-sm: 26px;
+$blog-nav-header-font-size-xs: 5vw;
+$blog-nav-header-font-size-sm: 24px;
 
-$blog-nav-link-font-size-xs: 4.5vw;
+$blog-nav-link-font-size-xs: 3vw;
 $blog-nav-link-font-size-sm: 16px;
 $blog-nav-link-font-letter-spacing-xs: calc(4.5vw * 0.2);
 
@@ -67,3 +65,12 @@ $unit-categories-font-size-sm: 12px;
 $article-header-font-size-xs: 10vw;
 $article-header-font-size-sm: 58px;
 $article-header-font-letter-spacing-xs: calc(10vw * 0.05);
+
+$read-next-title-font-size-xs: 6vw;
+$read-next-title-font-size-sm: 28px;
+
+$post-detail-title-font-size-xs: 5.5vw;
+$post-detail-title-font-size-sm: 26px;
+
+$sharing-button-font-size-xs: 4.5vw;
+$sharing-button-font-size-sm: 16px;
