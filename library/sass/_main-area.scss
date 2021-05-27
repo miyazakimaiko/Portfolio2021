@@ -3,14 +3,6 @@
 @import "colours";
 
 main {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-
-    @include xl {
-        top: 0;
-    }
-
     .inner-screen-container {
         position: relative;
         height: 100%;
@@ -62,7 +54,6 @@ main {
                 font-size: $s-font-size-xs;
                 font-family: $main-font;
                 line-height: $s-font-line-height-xs;
-                letter-spacing: $s-font-letter-spacing-xs;
                 font-weight: 200;
                 color: get-main-white-colour(0.9);
                 text-align: center;
@@ -73,7 +64,6 @@ main {
                 @include sm {
                     font-size: $s-font-size-sm;
                     line-height: 1.5;
-                    letter-spacing: $s-font-letter-spacing-sm;
                 }
             }
         }
@@ -89,10 +79,9 @@ main {
 
             .article-contents {
                 width: 90%;
-                padding-bottom: 10vh;
 
-                @include xl {
-                    width: 70%;
+                @include lg {
+                    width: 869px;
                 }
             }
 
@@ -100,7 +89,6 @@ main {
                 font-size: $s-font-size-xs;
                 font-family: $main-font;
                 line-height: $s-font-line-height-xs;
-                letter-spacing: $s-font-letter-spacing-xs;
                 font-weight: 200;
                 margin-bottom: 26px;
 
@@ -113,15 +101,7 @@ main {
                 @include sm {
                     font-size: $s-font-size-sm;
                     line-height: $s-font-line-height-sm;
-                    letter-spacing: $s-font-letter-spacing-sm;
                 }
-
-            }
-            tr, td {
-                font-size: $s-font-size-sm;
-                font-family: $main-font;
-                line-height: $s-font-line-height-xs;
-                letter-spacing: $s-font-letter-spacing-xs;
             }
         }
     }
