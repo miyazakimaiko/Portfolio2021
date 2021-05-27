@@ -4,7 +4,7 @@
 
 header {
     z-index: 100;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 92vw;
@@ -19,23 +19,6 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
-    }
-
-    .logo {
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 300px;
-        max-width: 70vw;
-        height: calc(100vw/10);
-        max-height: 50px;
-    }
-
-    .logo-white {
-        background-image: $logo-white;
-    }
-
-    .logo-dark {
-        background-image: $logo-dark;
     }
 }
 
