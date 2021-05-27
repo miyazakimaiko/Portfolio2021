@@ -2,6 +2,7 @@
 @import "loading-animation-general";
 @import "main-area";
 @import "font";
+@import "footer";
 
 .blog-post-header {
     @import "asset-urls";
@@ -69,6 +70,7 @@
         a {
             color:rgba(white, 0.7);
             text-transform: uppercase;
+
             &:after {
                 content: ", ";
             }
@@ -77,5 +79,169 @@
             }
         }
 
+    }
+}
+
+.sharing-buttons-section {
+    margin-bottom: 100px;
+
+    .sharing-button-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+
+        @include lg {
+            width: 100%;
+            max-width: 869px;
+            margin: auto;
+        }
+
+        .sharing-button {
+            width: 45%;
+            background-color: rgba($brown-colour, 0.2);
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+            transition: all .5s ease;
+
+            @include lg {
+                width: 30%;
+            }
+
+            &:hover {
+                background-color: rgba($brown-colour, 0.6);
+                a {
+                    color: white;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 13px 0 13px 13px;
+                font-family: $sub-font;
+                font-size: $sharing-button-font-size-xs;
+                color: $brown-colour;
+
+                @include sm {
+                    font-size: $sharing-button-font-size-sm;
+                }
+
+                span {
+                    &:before {
+                        content: "";
+                        @include md {
+                            content: "Share to ";
+                        }
+                    }
+                }
+
+                .sns-icon {
+                    height: $sharing-button-font-size-xs;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    margin-right: 5px;
+
+                    @include sm {
+                        height: $sharing-button-font-size-sm;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-recommendation-section {
+    margin: 0 20px 40px;
+    text-align: center;
+    h4 {
+        display: inline;
+        text-align: center;
+        font-size: $read-next-title-font-size-xs;
+        margin-bottom: 20px;
+        font-style: italic;
+
+        @include sm {
+            font-size: $read-next-title-font-size-sm;
+        }
+    }.arrow-icon {
+        height: $read-next-title-font-size-xs;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 5px;
+
+        @include sm {
+            height: $read-next-title-font-size-sm;
+        }
+    }
+    hr {
+        width: 90%;
+        margin: 10px auto 20px;
+
+        @include md {
+            margin: 10px auto 50px;
+        }
+    }
+    .posts-container {
+        @include md {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 80vw;
+            margin: auto;
+        }
+
+        .single-post {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: flex-start;
+
+            @include md {
+                width: 48%;
+                margin: 0 0 40px 0;
+            }
+
+            .post-image-containter {
+                margin: auto 15px auto 0;
+                .image {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    // max-width: 200px;
+                    background-image: url('/assets/images/old-stores-signboard.JPG');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    @include sm {
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+            }
+            .post-detail {
+                margin: auto 0;
+                text-align: left;
+                h5 {
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                    font-size: $post-detail-title-font-size-xs;
+                    font-weight: 200;
+
+                    @include sm {
+                        font-size: $post-detail-title-font-size-sm;
+                    }
+                }
+                p {
+                    font-size: $unit-meta-font-size-xs;
+
+                    @include sm {
+                        font-size: $unit-meta-font-size-sm;
+                    }
+                }
+            }
+        }
     }
 }
