@@ -1,4 +1,4 @@
-@import "screen-size-mixins";
+@import "screen-size-mixin";
 @import "loading-animation-general";
 @import "main-area";
 @import "font";
@@ -49,9 +49,11 @@
     }
     .headline {
         text-align: center;
+        font-family: $sub-font;
         font-size: $article-header-font-size-xs;
         letter-spacing: $article-header-font-letter-spacing-xs;
         line-height: 1.2;
+        padding: 0 5px;
         margin-bottom: 20px;
         max-width: 1000px;
 
@@ -91,11 +93,12 @@
         flex-wrap: wrap;
         justify-content: center;
         list-style: none;
+        margin: 40px auto 0 auto;
 
         @include lg {
             width: 100%;
             max-width: 869px;
-            margin: auto;
+            margin: 60px auto 0 auto;
         }
 
         .sharing-button {
@@ -208,8 +211,7 @@
                 .image {
                     height: 60px;
                     width: 60px;
-                    border-radius: 50%;
-                    // max-width: 200px;
+                    border-radius: 6px;
                     background-image: url('/assets/images/old-stores-signboard.JPG');
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -235,13 +237,161 @@
                     }
                 }
                 p {
+                    display: inline-block;
+                    font-family: $sub-font;
+                    text-transform: uppercase;
                     font-size: $unit-meta-font-size-xs;
 
                     @include sm {
                         font-size: $unit-meta-font-size-sm;
                     }
+
+                    &:after {
+                        content: ", ";
+                    }
+
+                    &:last-child {
+                        &::after {
+                            content: "";
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+//=======================================
+// Article contents styling
+//=======================================
+
+.article-contents {
+    h2 {
+        font-size: $article-h2-font-size-xs;
+        border-bottom: 5px solid $brown-colour;
+        padding: 3vw 0;
+        margin: 12vw 0;
+        line-height: 1.3;
+        font-family: $sub-font;
+
+        @include sm {
+            font-size: $article-h2-font-size-sm;
+            padding: 28px 0;
+            margin: 70px 0;
+        }
+    }
+    h3 {
+        font-size: $article-h3-font-size-xs;
+        font-family: $sub-font;
+        padding: 10px 0 10px 4.5vw;
+        margin: 10vw 0 4vw 0;
+        line-height: 1.3;
+        border-left: 5px solid brown;
+
+        @include sm {
+             font-size: $article-h3-font-size-sm;
+             padding-left: 20px;
+             margin: 40px 0 20px 0;
+        }
+
+    }
+    .article-contents-image {
+        width: 100%;
+        max-height: 80vh;
+        margin-bottom: 26px;
+
+        @include sm {
+            width: calc(100% - 72px);
+            margin: 10px 36px 36px 36px;
+        }
+    }
+    p {
+        a {
+            text-decoration: underline;
+            color: $brown-colour;
+        }
+        code {
+            background-color: rgba($brown-colour, 0.1);
+            padding: 0 5px;
+            font-size: $s-font-size-xs;
+            border-radius: 5px;
+
+            @include sm {
+                font-size: $s-font-size-sm;
+            }
+        }
+    }
+    ul {
+        margin: 10px 10px 26px 10px;
+        background-color: rgba($brown-colour, 0.1);
+        padding: 20px 20px 0 40px;
+
+        @include sm {
+            padding: 30px 20px 10px 60px;
+            margin: 10px 36px 36px 36px;
+        }
+
+        li {
+            font-size: $s-font-size-xs;
+            line-height: 1.8;
+            font-weight: 200;
+            hyphens: auto;
+            padding-bottom:4vw;
+
+            @include sm {
+                font-size: $s-font-size-sm;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    blockquote {
+        margin: 10px 10px 26px 10px;
+        padding: 20px 20px 0px 20px;
+        font-style: italic;
+        background-color: $main-gray-colour;
+
+        @include sm {
+            margin: 10px 36px 36px 36px;
+        }
+
+        p {
+            &:last-child {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+    .table-wrapper-paragraph {
+        width: 100%;
+        overflow-x: auto;
+        font-size: $s-font-size-xs;
+        padding-bottom: 26px;
+
+        @include sm {
+            font-size: $s-font-size-sm;
+            padding-bottom: 36px;
+        }
+    }
+    th {
+        background-color: rgba($brown-colour, 0.1);
+        border: 2px solid rgba($brown-colour, 0.2);
+        padding: 15px;
+        vertical-align: middle;
+        border-radius: 3px;
+    }
+    td {
+        background-color: whitesmoke;
+        border: 2px solid rgba($brown-colour, 0.2);
+        padding: 15px;
+        vertical-align: middle;
+    }
+    .gist-file {
+        margin-bottom: 26px;
+
+        @include sm {
+            margin-bottom: 36px;
+        }
+    }
+    .gist .blob-num {
+        border: none;
     }
 }
