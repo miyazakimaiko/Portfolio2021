@@ -19,46 +19,159 @@
 
     <div id="container" class="home">
         <header class="main">
-            <a href="/index.html">
-                <h1><div class="logo logo-white" style="display: none;"></div></h1>        
+            <a href="/index.html" style="visibility: hidden;">
+                <div id="header-logo" class="logo"><h1 style="color:transparent;">Maiko Miyazaki</h1></div>       
             </a>
             <div class="menu-wrapper">
                 <div class="menu-icon" onclick="this.classList.toggle('hover');OpenNavigation(0)">
-                    <div class="menu-bar menu-bar-white menu-bar1"></div>
-                    <div class="menu-bar menu-bar-white menu-bar2"></div>
-                    <div class="menu-bar menu-bar-white menu-bar3"></div>
+                    <div class="menu-bar menu-bar1"></div>
+                    <div class="menu-bar menu-bar2"></div>
+                    <div class="menu-bar menu-bar3"></div>
                 </div>
             </div>
         </header>
+
         <nav id="nav-screen">
-            <ul>
-                <li class="menu-link"></li>
-                <li class="menu-link"><a href="/index.html"><p class="menu-link-text">HOME</p></a></li>
-                <li class="menu-link"><a href="/about.html"><p class="menu-link-text">ABOUT</p></a></li>
-                <li class="menu-link"><a href="/projects.html"><p class="menu-link-text">PROJECTS</p></a></li>
-                <li class="menu-link"><a href="/blog.html"><p class="menu-link-text">BLOG</p></a></li>
-                <li class="menu-link"><a href="/contact.html"><p class="menu-link-text">CONTACT</p></a></li>
+            <ul class="nav-main-menu-link-list">
+                <li class="main-menu-link"><a href="/index.html" class="slide-in-text"><p class="main-menu-link-text">HOME</p></a></li>
+                <li class="main-menu-link"><a href="/about.html" class="slide-in-text"><p class="main-menu-link-text">ABOUT</p></a></li>
+                <li class="main-menu-link nested"><a href="/blog.html" class="slide-in-text"><p class="main-menu-link-text">BLOG</p></a>
+                    <ul class="nav-sub-menu-link-list">
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">Python</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">JavaScript</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">C#</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">Software Development</p></a></li>
+                    </ul>
+                </li>
+                <li class="main-menu-link"><a href="/contact.html" class="slide-in-text"><p class="main-menu-link-text">CONTACT</p></a></li>
             </ul>
+            <div class="popular-articles-container">
+                <div class="title-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-triangle-fill triangle-icon" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/>
+                    </svg>
+                    <h3 class="title">Popular Articles</h3>
+                </div>
+                <ul class="popular-articles-list">
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a class="article-title-link" href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>
+                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <div id="slideshow" onload="StartSlider(0)">
-            <!--<div class="slide-4 slide">
-                <video height="100%" autoplay muted loop id="my_video">
-                    <source src="/assets/mp4/adventure.mp4" type="video/mp4">
-                </video>
-            </div>-->
-            <div class="slide-1 slide"></div>
-        </div>
+
         <main>
             <div class="inner-container">
-                <div class="company-logo"></div>
-                <h1 class=catch-copy>Software engineer / Web developer</h1>
+                <div class="company-logo"><h1 style="color:transparent;">Maiko Miyazaki</h1></div>
+                <h2 class=catch-copy>Software engineer / Web developer</h2>
                 <div class="button-container">
-                    <form class="form-about">
-                        <label class="custom-btn-label" for="about-btn"><input type="button" class="custom-btn about-btn" onclick="window.location.href='/projects.html';" value="Projects"></label>
-                    </form>
-                    <form class="form-works">
-                        <label class="custom-btn-label" for="works-btn"><input type="button" class="custom-btn works-btn" onclick="window.location.href='/blog.html';" value="Blog"></label>
-                    </form>
+                    <a href="" class="custom-button about-button">
+                        About
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill play-icon" viewBox="0 0 16 16">
+                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        </svg>
+                    </a>
+                    <a href="" class="custom-button blog-button">
+                        Blog
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill play-icon" viewBox="0 0 16 16">
+                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </main>
