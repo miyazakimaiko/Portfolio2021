@@ -1,4 +1,4 @@
-@import "screen-size-mixins";
+@import "screen-size-mixin";
 @import "font";
 @import "colours";
 
@@ -38,9 +38,8 @@ main {
 
             .page-title {
                 font-size: $header-font-size-sm;
-                font-family: $header-font;
-                font-weight: 500;
-                letter-spacing: $catch-copy-font-letter-spacing;
+                font-family: $sub-font;
+                font-weight: 600;
 
                 margin: 50px 0 20px 0;
 
@@ -90,13 +89,9 @@ main {
                 font-family: $main-font;
                 line-height: $s-font-line-height-xs;
                 font-weight: 200;
-                margin-bottom: 26px;
+                padding-bottom: 26px;
 
                 hyphens: auto;
-
-                &:last-child {
-                    margin-bottom: 40px;
-                }
 
                 @include sm {
                     font-size: $s-font-size-sm;

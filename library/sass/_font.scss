@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
 
 $main-font: 'Crimson Text', serif;
 $sub-font:'Montserrat', sans-serif;
@@ -11,9 +11,28 @@ $header-font: 'Crimson Text', serif;
 //-----------------------------------
 // Used on the index page only
 // On the text right below the main logo
-$catch-copy-font-size-xs: 6vw;
-$catch-copy-font-size-sm: 30px;
-$catch-copy-font-letter-spacing: 6px;
+$catch-copy-font-size-xs: 5.5vw;
+$catch-copy-font-size-sm: 24px;
+
+$button-font-size-xs: 4vw;
+$button-font-size-sm: 16px;
+
+//-----------------------------------
+// Navigation screen
+//-----------------------------------
+$popular-article-container-title-font-size-xs: 6vw;
+$popular-article-container-title-font-size-sm: 28px;
+
+$popular-article-container-title-icon-size-xs: 3vw;
+$popular-article-container-title-icon-size-sm: 14px;
+
+$popular-article-title-font-size-xs: 6.5vw;
+$popular-article-title-font-size-sm: 32px;
+
+$popular-article-metadata-font-size-xs: 3vw;
+$popular-article-metadata-font-size-sm: 14px;
+
+
 
 //-----------------------------------
 // All pages
@@ -27,8 +46,7 @@ $header-font-size-sm: 48px;
 // All pages
 //-----------------------------------
 // Used for the general text on the screen
-// Larger than smartphone size
-$s-font-size-xs: 5.2vw;
+$s-font-size-xs: 5vw;
 $s-font-line-height-xs: 1.8;
 
 //-----------------------------------
@@ -49,8 +67,8 @@ $blog-nav-link-font-size-xs: 3vw;
 $blog-nav-link-font-size-sm: 16px;
 $blog-nav-link-font-letter-spacing-xs: calc(4.5vw * 0.2);
 
-$unit-meta-font-size-xs: 4vw;
-$unit-meta-font-size-sm: 16px;
+$unit-meta-font-size-xs: 3.5vw;
+$unit-meta-font-size-sm: 12px;
 $unit-meta-font-letter-spacing-sm: 0.5px;
 
 $unit-headline-font-size-xs: 7.5vw;
@@ -62,8 +80,8 @@ $unit-categories-font-size-sm: 12px;
 //-----------------------------------
 // single-article-page.html
 //-----------------------------------
-$article-header-font-size-xs: 10vw;
-$article-header-font-size-sm: 58px;
+$article-header-font-size-xs: 8vw;
+$article-header-font-size-sm: 50px;
 $article-header-font-letter-spacing-xs: calc(10vw * 0.05);
 
 $read-next-title-font-size-xs: 6vw;
@@ -72,5 +90,14 @@ $read-next-title-font-size-sm: 28px;
 $post-detail-title-font-size-xs: 5.5vw;
 $post-detail-title-font-size-sm: 26px;
 
+$unit-meta-font-size-xs: 3.5vw;
+$unit-meta-font-size-sm: 12px;
+
 $sharing-button-font-size-xs: 4.5vw;
 $sharing-button-font-size-sm: 16px;
+
+$article-h2-font-size-xs: 6.5vw;
+$article-h2-font-size-sm: 32px;
+
+$article-h3-font-size-xs: 4.5vw;
+$article-h3-font-size-sm: 24px;
