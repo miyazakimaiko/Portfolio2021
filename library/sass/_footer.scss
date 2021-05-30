@@ -1,4 +1,4 @@
-@import "screen-size-mixins";
+@import "screen-size-mixin";
 @import "asset-urls";
 
 footer {
@@ -18,35 +18,32 @@ footer {
 
         .footer-contents-title {
             font-size: 7vw;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
     
+            @include sm {
+                padding-bottom: 30px;
+                font-size: 26px;
+            }
+
             h4 {
                 span {
                     color: $brown-colour;
                 }
             }
-    
-            @include sm {
-                font-size: 26px;
-            }
         }
         hr {
             width: 40%;
-            margin: 0 auto 30px;
+            margin: 0 0 30px 0;
             border-top: 2px solid rgba($brown-colour, 0.6);
-    
-            @include md {
-                margin: 0 0 30px 0;
-            }
         }
         .footer-contents-section {
-            text-align: center;
-            margin-top: 80px;
+            margin-top: 60px;
     
             @include md {
                 width: 30%;
                 max-width: 450px;
                 text-align: left;
+                margin-top: 80px;
             }
         }
         .about-me-section {
@@ -54,6 +51,7 @@ footer {
                 h5 {
                     font-family: $sub-font;
                     font-size: 5vw;
+                    font-weight: 400;
                     margin-bottom: 30px;
     
                     @include sm {
@@ -75,7 +73,7 @@ footer {
                             font-family: $sub-font;
                             padding: 5px;
                             @include sm {
-                                font-size: 18px;
+                                font-size: 14px;
                             }
                         }
                     }
