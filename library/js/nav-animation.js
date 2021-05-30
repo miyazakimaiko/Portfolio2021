@@ -1,59 +1,47 @@
 let NavIsOpen = false;
 
 function OpenNavigation(n) {
-  let i;
   if (NavIsOpen == false) {
     NavIsOpen = true
 
+    let mainArea = document.querySelector("main")
+    mainArea.style.display = "none"
+
+    let footerArea = document.querySelector("footer")
+    footerArea.style.display = "none"
+
     // Show background
-    let navScreen = document.getElementById("nav-screen");
-    navScreen.style.display = "block";
+    let navScreen = document.getElementById("nav-screen")
+    navScreen.style.display = "flex"
 
     // fix the header
-    let header = document.querySelector("header");
-    header.style.position = "fixed";
+    let header = document.querySelector("header")
+    header.style.position = "fixed"
 
-    // Change custom cursor's colour
-    cursor.classList.add("whiten");
-
-    // Slide in menu links
-    setTimeout(SlideInMenuLink, 200)
+    let logo = document.getElementById("header-logo")
+    logo.style.display = "none"
 
   } else if (NavIsOpen == true) {
     NavIsOpen = false
 
     // Hide menu links first
-    SlideOutMenuLink()
+    // SlideOutMenuLink()
 
     // Then hide background
-    setTimeout(hideBackground, 800)
+    let navScreen = document.getElementById("nav-screen");
+    navScreen.style.display = "none";
+
+    let mainArea = document.querySelector("main")
+    mainArea.style.display = "grid"
+
+    let footerArea = document.querySelector("footer")
+    footerArea.style.display = "block"
 
     // unfix the header
     let header = document.querySelector("header");
     header.style.position = "absolute";
 
-    // Change the colour of custom cursor
-    cursor.classList.remove("whiten");
+    let logo = document.getElementById("header-logo")
+    logo.style.display = "block"
   }
-}
-
-function hideBackground(){
-  let navScreen = document.getElementById("nav-screen");
-  navScreen.style.display = "none";
-}
-
-function SlideInMenuLink() {
-  let elems = document.querySelectorAll(".menu-link-text");
-
-  elems.forEach(el => {
-    el.classList.add("is-animated");
-  })
-}
-
-function SlideOutMenuLink() {
-  let elems = document.querySelectorAll(".menu-link-text");
-
-  elems.forEach(el => {
-    el.classList.remove("is-animated");
-  })
 }
