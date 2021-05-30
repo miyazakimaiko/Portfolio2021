@@ -4,17 +4,19 @@
 
 @import "navigation";
 
+
+@import "colours";
+@import "font";
+
 body {
-    @import "colours";
-    overflow: hidden;
-    cursor: none;
     position: relative;
-    @import "font";
     font-family: $main-font;
+    color: $main-font-colour;
+    background-color: $main-gray-colour;
 
     .cursor {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 10px;
+        height: 10px;
         background-color: $brown-colour;
         opacity: 0.8;
         border-radius: 50%;
@@ -26,11 +28,24 @@ body {
         transition-property: background, transform;
         transform-origin: 100% 100%;
     }
-    .link-grow {
-        transform: scale(3);
-        opacity: 0.4;
-    }
     .whiten {
         background-color: $main-gray-colour;
+    }
+    .logo {
+        background-image: $logo-white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        max-width: 70vw;
+        height: calc(100vw/10);
+        max-height: 50px;
+    }
+    a:hover {
+        color: $brown-colour;
+    }
+    .link-grow {
+        background-color: $pink-colour;
+        transform: scale(3);
+        opacity: 0.4;
     }
 }
