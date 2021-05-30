@@ -9,18 +9,13 @@
     <link rel="stylesheet" href="./library/css/single-article-page.css">
 </head>
 
-
 <body>
     <div class="cursor"></div>
-
-    <div id="splash">
-        <div id="splash-logo">Loading...</div>
-    </div>
 
     <div id="container" class="about-page foreground-container">
         <header class="main">
             <a href="/index.html">
-                <h1><div class="logo logo-white"></div></h1>        
+                <h1><div id="header-logo" class="logo"></div></h1>        
             </a>
             <div class="menu-wrapper">
                 <div class="menu-icon" onclick="this.classList.toggle('hover');OpenNavigation(0)">
@@ -30,15 +25,129 @@
                 </div>
             </div>
         </header>
+
         <nav id="nav-screen">
-            <ul>
-                <li class="menu-link"></li>
-                <li class="menu-link"><a href="/index.html"><p class="menu-link-text">HOME</p></a></li>
-                <li class="menu-link"><a href="/about.html"><p class="menu-link-text">ABOUT</p></a></li>
-                <li class="menu-link"><a href="/projects.html"><p class="menu-link-text">PROJECTS</p></a></li>
-                <li class="menu-link"><a href="/blog.html"><p class="menu-link-text">BLOG</p></a></li>
-                <li class="menu-link"><a href="/contact.html"><p class="menu-link-text">CONTACT</p></a></li>
+            <ul class="nav-main-menu-link-list">
+                <li class="main-menu-link"><a href="/index.html" class="slide-in-text"><p class="main-menu-link-text">HOME</p></a></li>
+                <li class="main-menu-link"><a href="/about.html" class="slide-in-text"><p class="main-menu-link-text">ABOUT</p></a></li>
+                <li class="main-menu-link nested"><a href="/blog.html" class="slide-in-text"><p class="main-menu-link-text">BLOG</p></a>
+                    <ul class="nav-sub-menu-link-list">
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">Python</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">JavaScript</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">C#</p></a></li>
+                        <li class="sub-menu-link"><a href="/index.html" class="slide-in-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-return-right arrow-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                            <p class="sub-menu-link-text">Software Development</p></a></li>
+                    </ul>
+                </li>
+                <li class="main-menu-link"><a href="/contact.html" class="slide-in-text"><p class="main-menu-link-text">CONTACT</p></a></li>
             </ul>
+            <div class="popular-articles-container">
+                <div class="title-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-triangle-fill triangle-icon" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/>
+                    </svg>
+                    <h3 class="title">Popular Articles</h3>
+                </div>
+                <ul class="popular-articles-list">
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a class="article-title-link" href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="popular-article">
+                        <div class="thumbnail"></div>
+                        <div class="article-datail-container">
+                            <a href="">
+                                <h4 class="article-title">20 things I learned about Scrum from Learning Agile</h4>
+                            </a>
+                            <div class="topics">
+                                <a href="" class="topic">Software Development</a>
+                            </div>
+                            <div class="dates">
+                                <div class="posted-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock icon" viewBox="0 0 16 16">
+                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                    </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                                <div class="updated-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-repeat icon" viewBox="0 0 16 16">
+                                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                      </svg>
+                                    <time>4 Apr '20</time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <main>
@@ -49,92 +158,199 @@
                         <time class="date-updated">10 May '20</time>
                     </p>
                     <h1 class="headline">
-                        20 things I learned about Scrum from Learning Agile
+                        Completed JavaScript Data Structure Course, and Here is What I Learned About Linked List.
                     </h1>
                     <p class="categories">
-                        <a class="category" href="">Books</a>
-                        <a class="category" href="">Software Engineering</a>
-                        <a class="category" href="">Agile</a>
+                        <a class="category" href="">JanaScript</a>
+                        <a class="category" href="">Algorithm</a>
                     </p>
                 </section>
                 <article>
                     <div class="article-contents">
                         <p>
-                            Thanks for visiting. My name is Maiko Miyazaki.
-                            This static website is developed for a imaginary company called "Travel" which sells travel equipment. 
-                            Created with HTML5, CSS3, Sass, plain JavaScript and jQuery.
+                            It took a <code>month</code> to <strong>complete</strong> <a href="">JavaScript Algorithms and Data Structures course</a> on Udemy, and it was absolutely stimulating. Before taking the course, I created a Chrome Extension but I was only able to implement arrays and simple objects. I didn’t even know that data can be inefficient if we use inappropriate data structures.
+                        </p>
+                        <div class="table-wrapper-paragraph"><table>
+                            <thead>
+                            <tr>
+                            <th>Verb</th>
+                            <th>Written<br>on Github</th>
+                            <th>Definition</th>
+                            <th>Examples</th>
+                            <th>Synonyms<br>to avoid</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>set</td>
+                            <td>2B</td>
+                            <td>Often used to put data in an existing resource such as an attribute of an object.</td>
+                            <td>set_name(), set_store_id()</td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <td>change</td>
+                            <td>668M</td>
+                            <td>Often used when a whole thing, such as image, is replaced by something else</td>
+                            <td>change_image(), change_colour()</td>
+                            <td>edit</td>
+                            </tr>
+                            <tr>
+                            <td>edit</td>
+                            <td>325M</td>
+                            <td>Often used same as change. It could be used especially when action is responsible for rendering the view.</td>
+                            <td>edit_title(), edit_record()</td>
+                            <td>change</td>
+                            </tr>
+                            <tr>
+                            <td>update</td>
+                            <td>739M</td>
+                            <td>Often used when one or more of the components is updated as a result, and something new could also be added.</td>
+                            <td>update_file()</td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <td>add</td>
+                            <td>1B</td>
+                            <td>Often used to add something into a group of the things.</td>
+                            <td>add_item(), add_member()</td>
+                            <td>append</td>
+                            </tr>
+                            <tr>
+                            <td>append</td>
+                            <td>287M</td>
+                            <td>Often used same as add. It could be used when it does not modify the original group of things but produce the new group.</td>
+                            <td>append_item(), append_element()</td>
+                            <td>add</td>
+                            </tr>
+                            <tr>
+                            <td>remove</td>
+                            <td>824M</td>
+                            <td>Often used when a given thing is removed from a group of the things.</td>
+                            <td>remove_record(), remove_item()</td>
+                            <td>delete</td>
+                            </tr>
+                            <tr>
+                            <td>delete</td>
+                            <td>455M</td>
+                            <td>Often used same as remove, but it could also render nonrecoverable.</td>
+                            <td>delete_record(), delete_item()</td>
+                            <td>remove</td>
+                            </tr>
+                            <tr>
+                            <td>save</td>
+                            <td>478M</td>
+                            <td>Often used when preserving data to avoid loss.</td>
+                            <td>save_json(), save_order()</td>
+                            <td>store</td>
+                            </tr>
+                            <tr>
+                            <td>store</td>
+                            <td>396M</td>
+                            <td>Often used the same way as save.</td>
+                            <td>store_json(), store_order()</td>
+                            <td>save</td>
+                            </tr>
+                            <tr>
+                            <td>disable</td>
+                            <td>586M</td>
+                            <td>Often used to configure a resource an unavailable or inactive state.</td>
+                            <td>disable_user()</td>
+                            <td>hide</td>
+                            </tr>
+                            <tr>
+                            <td>hide</td>
+                            <td>237M</td>
+                            <td>Often has the same intention as disable, by hiding it.</td>
+                            <td>hide_field()</td>
+                            <td>disable</td>
+                            </tr>
+                            <tr>
+                            <td>split</td>
+                            <td>276M</td>
+                            <td>Used when separating parts of a resource.</td>
+                            <td>split_table(), split_group()</td>
+                            <td>separate</td>
+                            </tr>
+                            <tr>
+                            <td>separate</td>
+                            <td>151M</td>
+                            <td>Often used the same way as the verb split.</td>
+                            <td>separate_table(), separate_group()</td>
+                            <td>split</td>
+                            </tr>
+                            <tr>
+                            <td>merge</td>
+                            <td>312M</td>
+                            <td>Often used when creating a single resource from multiple resource.</td>
+                            <td>merge_records(),&nbsp; merge_tables()</td>
+                            <td>join</td>
+                            </tr>
+                            <tr>
+                            <td>join</td>
+                            <td>220M</td>
+                            <td>It can be used in a same way as merge.</td>
+                            <td>join_records(),&nbsp; join_tables()</td>
+                            <td>merge</td>
+                            </tr>
+                            </tbody>
+                        </table></div>
+                        <p>
+                            The Chrome Extension <strong> I created is for language learners, and users can create their own vocabulary list</strong> and save them at the corner of their browser.
+                        </p>
+                        <ul>
+                            <li>Difference between agile model and spiral model - stackoverflow</li>
+                            <li>What is Spiral model- advantages, disadvantages and when to use it? - TRY QA</li>
+                            <li>Spiral Model SDLC: Top Choice for Large, High-Risk Software Projects? - intellectsoft</li>
+                        </ul>
+                        <p>
+                            Basically I was only using simple arrays and objects to store three types of data in chrome local storage, and using the built-in unshift method to store the main vocabulary data -- which took O(n) time complexity.
                         </p>
                         <p>
-                            Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus. In justo sapien, vestibulum in efficitur sit amet, fringilla posuere elit. 
-                            Vestibulum nec commodo nunc, in sagittis dui. Fusce bibendum mauris ac lacus vulputate, 
-                            et congue ligula volutpat. Donec id sem massa. Mauris ex lectus, posuere nec tempus ac, 
-                            iaculis rhoncus urna. Suspendisse sed cursus odio.
+                            The main data looked like this:
                         </p>
                         <p>
-                            Suspendisse condimentum bibendum erat, vel sodales mauris vulputate at. Fusce libero tellus, 
-                            porttitor sit amet tempor et, cursus in nibh. Donec ipsum arcu, convallis eu ex non, suscipit sollicitudin enim. 
-                            Ut a auctor ex. Phasellus volutpat ultrices neque eget cursus. In a erat venenatis turpis interdum facilisis. 
-                            Praesent mollis urna quis commodo accumsan. Phasellus interdum, ligula sit amet mattis rhoncus, 
-                            tellus ex semper mi, at congue orci tellus at nulla. Donec ac augue eu nibh feugiat iaculis. 
-                            Etiam laoreet dictum purus, at ultrices urna euismod vitae. Sed finibus orci a dictum dapibus. 
-                            Vivamus ullamcorper, sem quis porttitor dapibus, magna felis fringilla augue, sed elementum diam est nec justo. 
-                            Sed feugiat pellentesque enim, vitae viverra erat vestibulum eget. Morbi consequat accumsan tempus. 
-                            Etiam metus tellus, blandit a dignissim eget, vehicula non quam.
+                            I also wanted to implement features to remove/edit each vocabulary efficiently. But as long as it's this structure, removing/editing a single element also takes O(n) time complexity because it involves re-indexing the whole data.
+                        </p>
+                        <img class="article-contents-image" src="/assets/images/singly-linked-list-have-to-re-index-each-element.jpg" alt="">
+                        <p>
+                            I realized that it shouldn't be the smartest way, but then, what is?
+                        </p>
+                        <blockquote>
+                            <p>
+                                Well, at that time, I didn't have a clue. That's because I had just started the course, and each data structure has its advantage, so I couldn't decide until I compare all the data structures that I'll be learning during the course.
+                            </p>
+                        </blockquote>
+                        <p>
+                            What I learned first on the course were linked lists. So in this article, I'm going to investigate whether the linked list is suitable for the data or not. And then, I am going through other data structures in future articles.
+                        </p>
+                        <h2 slot="h-1">
+                            Is Singly Linked List a Good Choice?
+                        </h2>
+                        <p>
+                            Singly linked list looks like this visually:
+                        </p>
+                        <iframe
+                        src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=theme%3Ax0p31y4zwmf&wt=sharp&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2520%2520%2520%2520DFS%28target%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520const%2520result%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520const%2520visited%2520%253D%2520%257B%257D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520const%2520helper%2520%253D%2520%28vert%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%21vert%29%2520return%2520null%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520visited%255Bvert%255D%2520%253D%2520true%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520result.push%28vert%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520for%2520%28let%2520neighbor%2520in%2520this.adjacencyList%255Bvert%255D%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28%21visited%255Bneighbor%255D%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520helper%28neighbor%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520helper%28target%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520return%2520result%253B%250A%2520%2520%2520%2520%257D"
+                        style="width: 544px; height: 362px; border:0; transform: scale(1); overflow:hidden;"
+                        sandbox="allow-scripts allow-same-origin">
+                      </iframe>
+                        <p>
+                            It took a month to complete JavaScript Algorithms and Data Structures course on Udemy, and it was absolutely stimulating. Before taking the course, I created a Chrome Extension but I was only able to implement arrays and simple objects. I didn’t even know that data can be inefficient if we use inappropriate data structures.
+                        </p>
+                        <h3 slot="sh-1-1">Define Node and Singly linked list</h3>
+                        <p>
+                            The Chrome Extension I created is for language learners, and users can create their own vocabulary list and save them at the corner of their browser.
                         </p>
                         <p>
-                            Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus. In justo sapien, vestibulum in efficitur sit amet, fringilla posuere elit. 
-                            Vestibulum nec commodo nunc, in sagittis dui. Fusce bibendum mauris ac lacus vulputate, 
-                            et congue ligula volutpat. Donec id sem massa. Mauris ex lectus, posuere nec tempus ac, 
-                            iaculis rhoncus urna. Suspendisse sed cursus odio.
+                            Basically I was only using simple arrays and objects to store three types of data in chrome local storage, and using the built-in unshift method to store the main vocabulary data -- which took O(n) time complexity.
+                        </p>
+                        <script src="https://gist.github.com/miyazakimaiko/94d21555840f5594964bb85d5fed6d27.js"></script>
+                        <p>
+                            Basically I was only using simple arrays and objects to store three types of data in chrome local storage, and using the built-in unshift method to store the main vocabulary data -- which took O(n) time complexity.
                         </p>
                         <p>
-                            Suspendisse condimentum bibendum erat, vel sodales mauris vulputate at. Fusce libero tellus, 
-                            porttitor sit amet tempor et, cursus in nibh. Donec ipsum arcu, convallis eu ex non, suscipit sollicitudin enim. 
-                            Ut a auctor ex. Phasellus volutpat ultrices neque eget cursus. In a erat venenatis turpis interdum facilisis. 
-                            Praesent mollis urna quis commodo accumsan. Phasellus interdum, ligula sit amet mattis rhoncus, 
-                            tellus ex semper mi, at congue orci tellus at nulla. Donec ac augue eu nibh feugiat iaculis. 
-                            Etiam laoreet dictum purus, at ultrices urna euismod vitae. Sed finibus orci a dictum dapibus. 
-                            Vivamus ullamcorper, sem quis porttitor dapibus, magna felis fringilla augue, sed elementum diam est nec justo. 
-                            Sed feugiat pellentesque enim, vitae viverra erat vestibulum eget. Morbi consequat accumsan tempus. 
-                            Etiam metus tellus, blandit a dignissim eget, vehicula non quam.
-                        </p>
-                        <p>
-                            Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus. In justo sapien, vestibulum in efficitur sit amet, fringilla posuere elit. 
-                            Vestibulum nec commodo nunc, in sagittis dui. Fusce bibendum mauris ac lacus vulputate, 
-                            et congue ligula volutpat. Donec id sem massa. Mauris ex lectus, posuere nec tempus ac, 
-                            iaculis rhoncus urna. Suspendisse sed cursus odio.
-                        </p>
-                        <p>
-                            Suspendisse condimentum bibendum erat, vel sodales mauris vulputate at. Fusce libero tellus, 
-                            porttitor sit amet tempor et, cursus in nibh. Donec ipsum arcu, convallis eu ex non, suscipit sollicitudin enim. 
-                            Ut a auctor ex. Phasellus volutpat ultrices neque eget cursus. In a erat venenatis turpis interdum facilisis. 
-                            Praesent mollis urna quis commodo accumsan. Phasellus interdum, ligula sit amet mattis rhoncus, 
-                            tellus ex semper mi, at congue orci tellus at nulla. Donec ac augue eu nibh feugiat iaculis. 
-                            Etiam laoreet dictum purus, at ultrices urna euismod vitae. Sed finibus orci a dictum dapibus. 
-                            Vivamus ullamcorper, sem quis porttitor dapibus, magna felis fringilla augue, sed elementum diam est nec justo. 
-                            Sed feugiat pellentesque enim, vitae viverra erat vestibulum eget. Morbi consequat accumsan tempus. 
-                            Etiam metus tellus, blandit a dignissim eget, vehicula non quam.
-                        </p>
-                        <p>
-                            Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus. In justo sapien, vestibulum in efficitur sit amet, fringilla posuere elit. 
-                            Vestibulum nec commodo nunc, in sagittis dui. Fusce bibendum mauris ac lacus vulputate, 
-                            et congue ligula volutpat. Donec id sem massa. Mauris ex lectus, posuere nec tempus ac, 
-                            iaculis rhoncus urna. Suspendisse sed cursus odio.
-                        </p>
-                        <p>
-                            Suspendisse condimentum bibendum erat, vel sodales mauris vulputate at. Fusce libero tellus, 
-                            porttitor sit amet tempor et, cursus in nibh. Donec ipsum arcu, convallis eu ex non, suscipit sollicitudin enim. 
-                            Ut a auctor ex. Phasellus volutpat ultrices neque eget cursus. In a erat venenatis turpis interdum facilisis. 
-                            Praesent mollis urna quis commodo accumsan. Phasellus interdum, ligula sit amet mattis rhoncus, 
-                            tellus ex semper mi, at congue orci tellus at nulla. Donec ac augue eu nibh feugiat iaculis. 
-                            Etiam laoreet dictum purus, at ultrices urna euismod vitae. Sed finibus orci a dictum dapibus. 
-                            Vivamus ullamcorper, sem quis porttitor dapibus, magna felis fringilla augue, sed elementum diam est nec justo. 
-                            Sed feugiat pellentesque enim, vitae viverra erat vestibulum eget. Morbi consequat accumsan tempus. 
-                            Etiam metus tellus, blandit a dignissim eget, vehicula non quam.
+                            Basically I was only using simple arrays and objects to store three types of data in chrome local storage, and using the built-in unshift method to store the main vocabulary data -- which took O(n) time complexity.
                         </p>
                     </div>
                 </article>
@@ -173,7 +389,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                         <div class="single-post">
@@ -183,7 +401,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                         <div class="single-post">
@@ -193,7 +413,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                         <div class="single-post">
@@ -203,7 +425,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                         <div class="single-post">
@@ -213,7 +437,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                         <div class="single-post">
@@ -223,7 +449,9 @@
                             <div class="post-detail">
                                 <h5 class="title">
                                     <a href="">20 things I learned about Scrum from Learning Agile</a></h5>
-                                <p class="time"><time>9 Apr 2021</time></p>
+                                <p class="topic">Software Development</p>
+                                <p class="topic">Agile</p>
+                                <p class="topic">Scrum</p>
                             </div>
                         </div>
                     </div>
@@ -272,8 +500,6 @@
         </footer>
 
     </div>
-    <script src="./library/js/jquery-3.6.0.min.js"></script>
-    <script src="./library/js/loading-animation.js"></script>
     <script src="./library/js/nav-animation.js"></script>
     <script src="./library/js/cursor.js"></script>
 </body>
